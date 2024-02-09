@@ -1,13 +1,17 @@
 <script>
-	export let name;
+import { Router } from 'svelte-spa-router';
+import routes from './routes';
 </script>
 
-<main>
+<Router {routes} />
+
+<!-- <main>
+	<Router {routes} />
 	<h1>Welcome to My Blog!</h1>
 	<p>This is the beginning of my personal blog project.</p>
-</main>
+</main> -->
 
-<style>
+<!-- <style>
 	main {
 		text-align: center;
 		padding: 1em;
@@ -27,4 +31,4 @@
 			max-width: none;
 		}
 	}
-</style>
+</style> -->

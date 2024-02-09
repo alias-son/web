@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "rollup-plugin-svelte": "^7.1.6",
+    "svelte": "^4.2.10",
+    "svelte-spa-router": "^4.0.1"
+  }
+}
