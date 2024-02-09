@@ -7,10 +7,10 @@ let comments = [];
 const { id } = useParams();
 
 onMount(async () => {
-    const postRes = await fetch(`https://your-backend-api/posts/${id}`);
+    const postRes = await fetch(`http://127.0.0.1:8000/posts/${id}`);
     post = await postRes.json();
 
-    const commentsRes = await fetch(`https://your-backend-api/posts/${id}/comments`);
+    const commentsRes = await fetch(`http://127.0.0.1:8000/posts/${id}/comments`);
     comments = await commentsRes.json();
 });
 
@@ -18,7 +18,7 @@ onMount(async () => {
 let newComment = "";
 
 async function submitComment() {
-    const res = await fetch(`https://your-backend-api/posts/${id}/comments`, {
+    const res = await fetch(`http://127.0.0.1:8000/posts/${id}/comments`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

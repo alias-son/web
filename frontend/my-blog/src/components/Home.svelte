@@ -6,7 +6,7 @@ import { Link } from 'svelte-spa-router';
     let searchQuery = '';
 
     onMount(async () => {
-        const res = await fetch('https://your-backend-api/posts');
+        const res = await fetch('http://127.0.0.1:8000/');
         posts = await res.json();
     });
 

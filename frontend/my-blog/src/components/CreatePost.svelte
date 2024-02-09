@@ -4,7 +4,7 @@
 
     async function createPost() {
         const post = { title, content };
-        await fetch('https://your-backend-api/posts', {
+        await fetch('http://127.0.0.1:8000/posts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
