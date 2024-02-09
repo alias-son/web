@@ -3,11 +3,12 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets
 from django.http import HttpResponse
+from django.shortcuts import render
 from .models import Post, Comment, Category
 from .serializers import PostSerializer, CommentSerializer, CategorySerializer
 
 def index(request):
-    return HttpResponse("Welcome to my blog!")
+    return render(request, 'blog/index.html')
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all().order_by('-created_on')
