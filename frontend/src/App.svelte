@@ -1,9 +1,17 @@
 <script>
-  let name = 'world';
+  let data = '';
+
+  const fetchData = async () => {
+    const response = await fetch('http://localhost:8000/api/data'); // FastAPI 서버 URL
+    const result = await response.json();
+    data = result.data;
+  }
+
+  fetchData();
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
+  <h1>Data from FastAPI: {data}</h1>
 </main>
 
 <style>
