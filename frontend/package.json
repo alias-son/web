@@ -1,7 +1,16 @@
 {
-  "dependencies": {
-    "rollup-plugin-svelte": "^7.1.6",
-    "svelte": "^4.2.10",
-    "svelte-spa-router": "^4.0.1"
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.1.1",
+    "svelte": "^4.2.18",
+    "vite": "^5.3.1"
   }
 }
